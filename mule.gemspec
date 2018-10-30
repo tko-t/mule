@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = ['lib/mule.rb']
   spec.bindir        = "exe"
-  spec.executables   = ['mule']
+  spec.executables   = ['mule_clip']
   spec.require_paths = ["lib"]
 
   spec.add_dependency "clipboard", "~> 1.1"

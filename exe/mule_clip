@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "mule/version"
 require 'clipboard'
-load './lib/mule/version.rb'
 
 if /(^-v$)|(^--version$)/ =~ ARGV[0].strip
   puts Mule::VERSION
