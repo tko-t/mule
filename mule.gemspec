@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/tko-t/mule"
   spec.license       = "MIT"
 
-  spec.files         = ['lib/mule_clip.rb']
+  spec.files         = ['lib/mule_clip.rb', 'lib/mule_clip/version.rb']
   spec.bindir        = "exe"
   spec.executables   = ['mule_clip']
   spec.require_paths = ["lib"]
