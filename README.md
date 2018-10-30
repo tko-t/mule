@@ -1,15 +1,18 @@
-# Mule
+# MuleClip
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mule`. To experiment with that code, run `bin/console` for an interactive prompt.
+is Clipboard Agent.
 
-TODO: Delete this and the text above, and describe your gem
+    $ mule_clip path/to/clip_path
+    $ echo 'foo' | pbcopy
+    push paste key
+    $ foo
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mule'
+gem 'mule_clip'
 ```
 
 And then execute:
@@ -18,12 +21,20 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install mule
+    $ gem install mule_clip
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ mule_clip path/to/clip_path
+    
+    or
+    
+    $ CLIPBOARD_BIND_FILE=path/to/clip_path mule_clip
+    
+    and
 
+    $ echo 'alias pbcopy="> ~/path/to/clip_path"'
+    
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
