@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "mule/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "mule"
+  spec.name          = "mule_clip"
   spec.version       = Mule::VERSION
   spec.authors       = ["tko-t"]
   spec.email         = ["tkot.bom@gmail.com"]
