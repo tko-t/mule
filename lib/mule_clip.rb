@@ -1,4 +1,4 @@
 #require "mule/version"
 
-module Mule
+module MuleClip
 end

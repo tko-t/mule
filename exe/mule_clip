@@ -2,11 +2,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "mule/version"
+require "mule_clip/version"
 require 'clipboard'
 
-if /(^-v$)|(^--version$)/ =~ ARGV[0].strip
-  puts Mule::VERSION
+if /(^-v$)|(^--version$)/ =~ (ARGV[0] || "").strip
+  puts MuleClip::VERSION
   exit 0
 end
 
