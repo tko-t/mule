@@ -1,17 +1,12 @@
-=begin
-ファイルを監視して、変更があったらクリップボードに突っ込みます
-引数か環境変数('CLIPBOARD_BIND_FILE')で監視するファイルを指定します
-using
-  $ bundle init
-  $ echo "gem 'clipboard'" >> Gemfile
-  $ echo "gem 'ffi', :platforms => [:mswin, :mingw]" >> Gemfile
-  $ bundle install
-  # 実行
-  $ ruby rb_pbcopy.rb path/to/watching_file
-  # 修了
-  $ ruby rb_pbcopy.rb stop
-=end
+#!/usr/bin/env ruby
+
 require 'clipboard'
+load './lib/mule/version.rb'
+
+if /(^-v$)|(^--version$)/ =~ ARGV[0].strip
+  puts Mule::VERSION
+  exit 0
+end
 
 if ARGV[0] == 'kill'
   pid = File.read('pid').strip
@@ -20,7 +15,7 @@ if ARGV[0] == 'kill'
 end
 
 watching = ARGV[0]
-watching = ENV['CLIPBOARD_BIND_FILE']
+watching = ENV['CLIPBOARD_BIND_FILE'] unless watching
 
 abort 'パスくれ' unless watching
 
